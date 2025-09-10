@@ -5,140 +5,16 @@
 
     <artifactId>operation-processing</artifactId>
 
-    <version>3.1.29</version>
-
+    <version>3.1.101</version>
+    <groupId>ru.uralsib.dbo</groupId>
     <name>operation-processing</name>
     <description>Обработчик документов</description>
 
-    <parent>
-        <groupId>ru.uralsib.dbo</groupId>
-        <artifactId>microservice-parent</artifactId>
-        <version>3.1.29</version>
-        <relativePath/>
-    </parent>
-
     <properties>
         <java.version>17</java.version>
-        <liquibase.version>4.7.0</liquibase.version>
-        <mapstruct.version>1.4.2.Final</mapstruct.version>
-        <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.tomcat</groupId>
-                    <artifactId>tomcat-jdbc</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.liquibase</groupId>
-            <artifactId>liquibase-core</artifactId>
-            <version>3.1.29</version>
-        </dependency>
-        <dependency>
-            <groupId>org.zalando</groupId>
-            <artifactId>logbook-spring-boot-starter</artifactId>
-            <version>3.1.29</version>
-        </dependency>
-        <dependency>
-            <groupId>oracle</groupId>
-            <artifactId>ojdbc8</artifactId>
-            <version>3.1.29</version>
-        </dependency>
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>3.1.29</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.tomakehurst</groupId>
-            <artifactId>wiremock-jre8</artifactId>
-            <version>3.1.29</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>3.1.29</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.1.29</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct</artifactId>
-            <version>3.1.29</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct-processor</artifactId>
-            <version>3.1.29</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok-mapstruct-binding</artifactId>
-            <version>3.1.29</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-cache</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>ru.uralsib.dbo</groupId>
-            <artifactId>togglz-starter</artifactId>
-            <version>3.1.29</version>
-        </dependency>
-        <dependency>
-            <groupId>ru.uralsib.dbo</groupId>
-            <artifactId>history-event-starter</artifactId>
-            <version>3.1.29</version>
-        </dependency>
-        <dependency>
-            <groupId>ru.uralsib.dbo</groupId>
-            <artifactId>common</artifactId>
-            <version>3.1.29</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.ws</groupId>
-                    <artifactId>spring-ws-core</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
     </dependencies>
     <profiles>
         <profile>
@@ -157,27 +33,6 @@
             </resource>
         </resources>
         <plugins>
-            <plugin>
-                <groupId>org.liquibase</groupId>
-                <artifactId>liquibase-maven-plugin</artifactId>
-                <version>3.1.29</version>
-                <configuration>
-                    <!-- Файл liquibase.properties будет добавлен в GitLab пайплайне -->
-                    <propertyFile>db/changelog/liquibase.properties</propertyFile>
-                    <!-- And a lot of other properties to configure -->
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>update</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
