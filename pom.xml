@@ -5,7 +5,7 @@
 
     <artifactId>operation-processing</artifactId>
 
-    <version>3.1.101</version>
+    <version>3.1.100</version>
     <groupId>ru.uralsib.dbo</groupId>
     <name>operation-processing</name>
     <description>Обработчик документов</description>
