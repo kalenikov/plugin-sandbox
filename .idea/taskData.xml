@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="TaskDataService">
+    <option name="commitText" value="UCM-57098 Chad Hills" />
+    <option name="fromBranch" value="master" />
+    <option name="newBranchName" value="UCM-222" />
+    <option name="newChangelogText" value="## 3.1.106 (2025-09-11)&#10;* [UCM-57098] (https://task.uralsib.ru/browse/UCM-57098)&#10;* Chad Hills&#10;" />
+    <option name="newPomVersion" value="3.1.106" />
+    <option name="pomVersion" value="3.1.105" />
+    <option name="summary" value="Chad Hills" />
+  </component>
+</project>
